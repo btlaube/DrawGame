@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 1
+  canvasGroup: {fileID: 8599102341895710551, guid: 0376ab33b295f664fa21d6b34ea8735c, type: 3}

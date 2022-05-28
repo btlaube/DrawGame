@@ -8,6 +8,7 @@ public class SceneManagerScript : MonoBehaviour
     //public Animator transition;
     public float transitionTime = 1f;
     //public Player player;
+    public GameObject canvasGroup;
 
     public static SceneManagerScript instance;
 
@@ -26,10 +27,12 @@ public class SceneManagerScript : MonoBehaviour
 
     public void LoadGameScene() {
         StartCoroutine(LoadLevel(1));
+        canvasGroup.GetComponent<CanvasGroupScript>().LoadGameScene();
     }
 
     public void LoadMainMenu() {
         StartCoroutine(LoadLevel(0));
+        canvasGroup.GetComponent<CanvasGroupScript>().LoadMainMenu();
     }
 
     IEnumerator LoadLevel(int levelIndex) {
